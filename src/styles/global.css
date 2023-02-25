@@ -1,0 +1,42 @@
+:root {
+  --font-sans: "InterVariable";
+  --font-serif: var(--font-sans);
+  --font-heading: var(--font-sans);
+  --color-primary: rgb(30 64 175);
+  --color-secondary: rgb(30 58 138);
+  --color-accent: rgb(109 40 217);
+  --color-dark: 231deg 13% 11%;
+  --color-gray: 215deg, 14%, 34%;
+  --color-offwhite: 210deg 20% 98%;
+  --color-white: 0deg 0% 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-page {
+    color: var(--color-dark);
+  }
+
+  .text-muted {
+    color: var(--color-gray);
+  }
+
+  .bg-light {
+    background-color: var(--color-offwhite);
+  }
+
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+}
+
+[astro-icon].icon-light > * {
+  stroke-width: 1.2;
+}
+
+[astro-icon].icon-bold > * {
+  stroke-width: 2.4;
+}
