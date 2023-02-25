@@ -1,81 +1,59 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="hello there">
+  <main>
+    <section class="py-24 bg-gray-900 text-gray-50">
+      <div class="container w-[90%] max-w-[1344px] mx-auto">
+        <div
+          class="w-full grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-6"
+        >
+          <div class="hero-content--wrapper">
+            <span class="text-pink-400 font-medium uppercase text-sm"></span>
+            <h1
+              class="text-indigo-400 font-bold leading-snug mb-8 text-4xl lg:text-7xl"
+            >
+              Ready for the next adventure!
+            </h1>
+            <span class="text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, reprehenderit!</span
+            >
+            <div
+              class="hero-CTA mt-12 max-w-xs sm:max-w-md flex flex-nowrap flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
+              <button
+                class="flex w-full sm:w-auto py-3 px-5 bg-pink-400 rounded-xl"
+              >
+                <a
+                  class="sm:mb-0 w-full"
+                  href="/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="font-medium text-normal">I am ready</span>
+                </a>
+              </button>
+              <a
+                class="flex w-full sm:w-auto py-3 px-5 bg-transparent border border-pink-400 rounded-xl"
+                href="/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="font-medium text-normal">Learn more</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image--wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1615627121117-e3278bc8b1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2667&q=80"
+              alt="Two spacionautes admiring their spaceship"
+              class="rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
